@@ -16,12 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/order', function () {
+Route::get('/order.php', function () {
     return view('order');
 });
-Route::get('/recipe', function () {
+Route::get('/recipe.php', function () {
     return view('recipe');
 });
-Route::get('/location', function () {
+Route::get('/location.php', function () {
     return view('location');
 });
+
+
+Route::view('/order', 'order');
