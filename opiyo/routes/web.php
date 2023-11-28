@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::get('/location.php', function () {
 
 
 Route::view('/order', 'order');
+
+Route::get('add-recipe-post-form', [PostController::class, 'index']);
+Route::post('store-form', [PostController::class, 'store']);
